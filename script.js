@@ -44,16 +44,39 @@ print this again?’ > 'yes' Output: ‘Hello. My name is Adam!' Prompt: ‘Woul
 
 */
 
+     var yesorno = prompt("Would you like to print your name?");
+if (yesorno != "yes") {
+    console.log("Have a lovely day.");
+}
+if (yesorno === "yes") {
+    var name = prompt("Enter your name.");
+    console.log(name);
+    var again = prompt("Would you like to print your name again?")
+    while (again === "yes") {
+        var name = (name + "!");
+        console.log(name);
+        var again = prompt("Would you like to print your name again?")
+    }
+    if (again != "yes") {
+        console.log("Thanks for playing!");
+    }
+}
+
 // 4
 
-/*
-
-Prompt the user for a time of day (morning, noon, or evening). Based on their input, log a string to the console
-that will let the user know what they should be eating for that specific meal. Use the tables below to guide your
-logic.
-Example Outputs:
-Prompt: ‘What time of day is it?’ > ‘morning’ Output: ‘Since it is morning, you should be eating breakfast. We
-suggest eggs and toast.’ Prompt: ‘What time of day is it?’ > ‘evening’ Output: ‘Since it is evening, you should be
-eating dinner. We suggest chicken and rice.’
-
- */
+var time = prompt("What time of day is it?");
+while (time != "morning" || time != "noon" || time != "evening") {
+  var time = prompt("What time of day is it?");
+  if (time === "morning" || time=== "noon" || time=== "evening") {
+    break;
+  }
+}
+if (time=== "morning") {
+  console.log("Since it's morning, you should be eating breakfast. We suggest eggs and toast.");
+}
+else if (time === "noon") {
+  console.log("Since it's noon, you should be eating lunch. We suggest a salad.");
+}
+else if (time === "evening") {
+  console.log("Since it's evening, you should be eating dinner. We suggest chicken and rice.");
+}

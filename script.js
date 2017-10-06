@@ -1,9 +1,5 @@
 // 1
 
-/* For loop from Lilli */
-
-for (var i=0; i<=a; i++)
-
 /*
 
 Prompt the user for a number. Write a for loop that will add all of the numbers leading up to that number,
@@ -13,9 +9,22 @@ Prompt: ‘Enter A Number!’ > 5 Output: 15
 
 */
 
-// 2
+var a = prompt("Wanna see some magic?...I mean, do you want to do some maths?");
+var sum = 0;
+while (Number.isInteger(a) === false) {
+    var a = Number(prompt("Please enter an integer, or magic number!"));
+    if (Number.isInteger(a) === true) {
+        break;
+    }
+}
+for (var i=0; i<=a; i++) {
+    sum = (sum + i);
+}
+console.log(sum + " is " + a + " with all inclusive numbers added up consecutively!  Magic, right?!");
 
-/* While loop */
+
+
+// 2
 
 /*
 
@@ -29,6 +38,31 @@ Prompt: ‘Do you want to play?’ > 'yes' > Prompt: ‘Enter a word.’ > 'dog'
 > 'yes' > Prompt: ‘Enter a word.' > 'cat' > Prompt: ‘Do you want to play again?’ > 'no' Output: 'dog cat'
 
 */
+
+var sentence = (" ");
+do {
+    var yesOrNo = prompt("Do you want to play?");
+    if (yesOrNo === "no") {
+        break;
+    }
+    while (yesOrNo != "yes" && yesOrNo != "no") {
+        var yesOrNo = prompt("Do you want to play? Enter yes or no.");
+        if (yesOrNo === "no") {
+            break;
+        }
+    }
+    if (yesOrNo === "yes") {
+        var wordToAdd = prompt("Enter a word.");
+        var sentence = (sentence + " " + wordToAdd);
+    }
+    else if (yesorno === "no") {
+        console.log(sentence);
+        break;
+    }
+}
+while (yesorno = "yes");
+
+
 
 // 3
 
@@ -62,9 +96,11 @@ if (yesorno === "yes") {
     }
 }
 
+
+
 // 4
 
-var time = prompt("What time of day is it?");
+var time = prompt("What time of day is it?  morning, noon or evening?");
 while (time != "morning" || time != "noon" || time != "evening") {
   var time = prompt("What time of day is it?");
   if (time === "morning" || time=== "noon" || time=== "evening") {
@@ -80,3 +116,11 @@ else if (time === "noon") {
 else if (time === "evening") {
   console.log("Since it's evening, you should be eating dinner. We suggest chicken and rice.");
 }
+
+/*
+
+Prompt the user for a time of day (morning, noon, or evening). Based on their input, log a string to the
+console that will let the user know what they should be eating for that specific meal. Use the tables below
+to guide your logic.
+
+ */

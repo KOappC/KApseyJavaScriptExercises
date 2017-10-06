@@ -20,7 +20,7 @@ while (Number.isInteger(a) === false) {
 for (var i=0; i<=a; i++) {
     sum = (sum + i);
 }
-console.log(sum + " is " + a + " with all inclusive numbers added up consecutively!  Magic, right?!");
+console.log(a + " is " + sum + " with all inclusive numbers added up consecutively!  Magic, right?!");
 
 
 
@@ -78,11 +78,11 @@ print this again?’ > 'yes' Output: ‘Hello. My name is Adam!' Prompt: ‘Woul
 
 */
 
-     var yesorno = prompt("Would you like to print your name?");
-if (yesorno != "yes") {
+     var yesOrNo = prompt("Would you like to print your name?");
+if (yesOrNo != "yes") {
     console.log("Have a lovely day.");
 }
-if (yesorno === "yes") {
+if (yesOrNo === "yes") {
     var name = prompt("Enter your name.");
     console.log(name);
     var again = prompt("Would you like to print your name again?")
@@ -100,13 +100,10 @@ if (yesorno === "yes") {
 
 // 4
 
-var time = prompt("What time of day is it?  morning, noon or evening?");
+var time = prompt("What time of day is it?");
 while (time != "morning" || time != "noon" || time != "evening") {
   var time = prompt("What time of day is it?");
-  if (time === "morning" || time=== "noon" || time=== "evening") {
-    break;
-  }
-}
+  if (time === "morning" || time=== "noon" || time=== "evening")
 if (time=== "morning") {
   console.log("Since it's morning, you should be eating breakfast. We suggest eggs and toast.");
 }
@@ -115,6 +112,8 @@ else if (time === "noon") {
 }
 else if (time === "evening") {
   console.log("Since it's evening, you should be eating dinner. We suggest chicken and rice.");
+}
+break;
 }
 
 /*

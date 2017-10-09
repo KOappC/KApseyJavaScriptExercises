@@ -45,22 +45,23 @@ do {
     if (yesOrNo === "no") {
         break;
     }
-    while (yesOrNo != "yes" && yesOrNo != "no") {
+    if (yesOrNo === "yes") {
+        var wordToAdd = prompt("Enter a word.");
+        var sentence = (sentence + " " + wordToAdd);
+    }
+    else if (yesOrNo === "no") {
+        console.log(sentence);
+        break;
+    }
+
+    while (yesOrNo != "yes" && yesorno != "no") {
         var yesOrNo = prompt("Do you want to play? Enter yes or no.");
         if (yesOrNo === "no") {
             break;
         }
     }
-    if (yesOrNo === "yes") {
-        var wordToAdd = prompt("Enter a word.");
-        var sentence = (sentence + " " + wordToAdd);
-    }
-    else if (yesorno === "no") {
-        console.log(sentence);
-        break;
-    }
 }
-while (yesorno = "yes");
+while (yesOrNo = "yes");
 
 
 
@@ -100,7 +101,7 @@ if (yesOrNo === "yes") {
 
 // 4
 
-var time = prompt("What time of day is it?");
+
 while (time != "morning" || time != "noon" || time != "evening") {
   var time = prompt("What time of day is it?");
   if (time === "morning" || time=== "noon" || time=== "evening")

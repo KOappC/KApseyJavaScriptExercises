@@ -42,24 +42,22 @@ Prompt: ‘Do you want to play?’ > 'yes' > Prompt: ‘Enter a word.’ > 'dog'
 var sentence = (" ");
 do {
     var choice = prompt("Do you want to play?");
-    if (choice === "no")  {
+    if (choice === "no") {
         break;
     }
-    if (choice === "yes") {
-        var word = prompt("Enter a word.");
-        var sentence = (sentence + " " + word);
-    }
-    else if (choice === "no") {
-        console.log(sentence);
-        break;
-    }
-
-    while (choice != "yes" && choice != "no") {
-        var choice = prompt("Do you want to play? Enter yes or no.");
-        /* if (choice === "no") */ {
+    while (choice != "yes") {
+        {
             break;
         }
-
+    }
+    if (choice === "yes") {
+        var words = prompt("Enter a word.");
+        var sentence = (sentence + " " + words);
+    }
+    else if (choice === "no") {
+        console.log(sentence)
+        break;
+    }
 }
 while (choice = "yes");
 

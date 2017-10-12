@@ -99,7 +99,7 @@ if (choice === "yes") {
 while (time != "morning" && time != "noon" && time != "evening") {
     var time = prompt("What time of day is it?");
 }
-if (time=== "morning") {
+if (time === "morning") {
     console.log("Since it's morning, you should be eating breakfast. We suggest eggs and toast.");
 }
 else if (time === "noon") {

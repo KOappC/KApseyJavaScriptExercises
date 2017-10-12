@@ -47,21 +47,15 @@ do {
         break;
     }
     while (choice != "yes" && choice != "no") {
-        console.log("Please enter yes or no");
+        choice = prompt("Please enter yes or no");
 
     }
     if (choice === "yes") {
         var words = prompt("Enter a word.");
         sentence = (sentence + " " + words);
     }}
-
-
-if (choice === "no") {
-    console.log(sentence);
-
-
-}
-while (choice === "yes");
+while (choice != "no");
+console.log(sentence);
 
 
 
@@ -79,11 +73,11 @@ print this again?’ > 'yes' Output: ‘Hello. My name is Adam!' Prompt: ‘Woul
 
 */
 
-     var yesOrNo = prompt("Would you like to print your name?");
-if (yesOrNo != "yes") {
+     var choice = prompt("Would you like to print your name?");
+if (choice != "yes") {
     console.log("Have a lovely day.");
 }
-if (yesOrNo === "yes") {
+if (choice === "yes") {
     var name = prompt("Enter your name.");
     console.log(name);
     var again = prompt("Would you like to print your name again?")

@@ -96,19 +96,17 @@ if (choice === "yes") {
 // 4
 
 
-while (time != "morning" || time != "noon" || time != "evening") {
-  var time = prompt("What time of day is it?");
-  if (time === "morning" || time=== "noon" || time=== "evening")
+while (time != "morning" && time != "noon" && time != "evening") {
+    var time = prompt("What time of day is it?");
+}
 if (time=== "morning") {
-  console.log("Since it's morning, you should be eating breakfast. We suggest eggs and toast.");
+    console.log("Since it's morning, you should be eating breakfast. We suggest eggs and toast.");
 }
 else if (time === "noon") {
-  console.log("Since it's noon, you should be eating lunch. We suggest a salad.");
+    console.log("Since it's noon, you should be eating lunch. We suggest a salad.");
 }
 else if (time === "evening") {
-  console.log("Since it's evening, you should be eating dinner. We suggest chicken and rice.");
-}
-break;
+    console.log("Since it's evening, you should be eating dinner. We suggest chicken and rice.");
 }
 
 /*
